@@ -1,0 +1,1 @@
+import{useEffect as r,useState as a,useLayoutEffect as i}from"react";const S=(o,e)=>{const[t,s]=a(o);return i(()=>{sessionStorage.getItem(e)?s(JSON.parse(sessionStorage.getItem(e))):sessionStorage.setItem(e,JSON.stringify(t))},[]),r(()=>{sessionStorage.setItem(e,JSON.stringify(t))},[t]),[t,s]};export default S;
