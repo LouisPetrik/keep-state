@@ -1,11 +1,12 @@
 {
   "name": "keep-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal React hook for keeping state across SSR / static pages in Next, Gatsby and Astro. ",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/esbuild src/index.js --minify --global-name=useKeepState --outfile=dist/index2.js"
+    "build": "./node_modules/.bin/esbuild src/index.js --minify --global-name=useKeepState --outfile=dist/index2.js",
+    "prepublish": "yarn run build"
   },
   "keywords": [],
   "author": "Louis Petrik",
