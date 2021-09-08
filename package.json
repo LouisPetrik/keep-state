@@ -1,13 +1,14 @@
 {
   "name": "keep-state",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "A minimal React hook for keeping state across SSR / static pages in Next, Gatsby and Astro. ",
   "main": "dist/index.js", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup src/index.js --file dist/index.js --format cjs",
-    "prepublish": "yarn run build"
+    "deploy": "yarn run build && npm publish"
   },
+
   "repository": {
     "type": "git", 
     "url": "https://github.com/LouisPetrik/keep-state"
