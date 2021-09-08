@@ -8,15 +8,14 @@ const useKeepState = (initialState, key) => {
 
 	// to make sure in Next.js, the rendering is only happening
 	// client-side. Else, next will complain and idk why.
-	if (!SSR) {
-		useLayoutEffect(() => {
-			if (sessionStorage.getItem(key)) {
-				setState(JSON.parse(sessionStorage.getItem(key)))
-			} else {
-				sessionStorage.setItem(key, JSON.stringify(state))
-			}
-		}, [])
-	}
+
+	useLayoutEffect(() => {
+		if (sessionStorage.getItem(key)) {
+			setState(JSON.parse(sessionStorage.getItem(key)))
+		} else {
+			sessionStorage.setItem(key, JSON.stringify(state))
+		}
+	}, [])
 
 	useEffect(() => {
 		sessionStorage.setItem(key, JSON.stringify(state))

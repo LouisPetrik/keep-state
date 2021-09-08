@@ -1,6 +1,6 @@
 {
   "name": "keep-state",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A minimal React hook for keeping state across SSR / static pages in Next, Gatsby and Astro. ",
   "main": "dist/index.js", 
   "scripts": {
