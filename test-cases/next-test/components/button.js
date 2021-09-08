@@ -1,4 +1,4 @@
-import useKeepState from 'keep-state'
+import useKeepState from './useKeepState'
 
 export default function Button() {
 	const [count, setCount] = useKeepState(0, 'key-1')
